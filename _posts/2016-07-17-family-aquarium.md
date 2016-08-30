@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Family Aquarium"
-date:   2016-07-17 21:54:41 +1000
+title: Family Aquarium
+date: '2016-07-17 21:54:41 +1000'
 categories: aquarium
+published: false
 ---
 My daughter finally succumbed to family influences and peer presure and started to ask if she could have a pet of some kind. We're currently renting so my wife and I suggested she could have a fish. Somebody mentioned to my wife about a Betta, which kicked off the usual investigation.
 
