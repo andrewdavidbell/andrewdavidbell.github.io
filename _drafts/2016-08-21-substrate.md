@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Fluval Stratum"
-date:   2016-08-20 18:54:41 +1000
+title: Fluval Stratum
+date: '2016-08-20 18:54:41 +1000'
 categories: aquarium
+published: true
 ---
-This afternoon I decided to visit a new aquarium store called Amazing Amazon in
-Glen Waverley, Vic. I've picked up a 4kg bag of Fluval Plant and Shrimp Subtrate
-and an API Master Freshwater Test Kit.
+This afternoon I decided to visit a new aquarium store called Amazing Amazon in Glen Waverley, Vic. I've picked up a 4kg bag of Fluval Stratum and an API Master Freshwater Test Kit.
 
 ![Fluval Subtrate]({{ site.url }}/assets/fluval substrate.jpg)
 
