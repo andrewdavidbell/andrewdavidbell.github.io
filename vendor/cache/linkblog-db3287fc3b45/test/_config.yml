@@ -1,0 +1,18 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+baseurl: "food"
+url: "http://yourdomain.com"
+timezone: UTC
+
+exclude:
+  - Gemfile*
+
+# Build settings
+markdown: kramdown
+gems:
+  - octopress-linkblog
+
+linkblog:
+  post:
+    marker: ★

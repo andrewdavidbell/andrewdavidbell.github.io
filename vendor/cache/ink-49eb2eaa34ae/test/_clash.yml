@@ -1,0 +1,124 @@
+-
+  title: Simple build
+  dir: standard
+  build: true
+-
+  title: Compare build
+  dir: standard
+  compare: _expected/standard _site
+-
+  title: Should build with separate javascript and stylesheet files
+  dir: standard
+  build: true
+  config:
+    jekyll: 
+      - _config.yml
+      - _combine_false.yml
+  compare:
+    - _expected/combine_false/stylesheets _site/stylesheets
+    - _expected/combine_false/javascripts _site/javascripts
+    - _expected/combine_false/asset_tag.html _site/asset_tag.html
+-
+  title: Should compress stylesheets and javascripts
+  dir: standard
+  build: true
+  config:
+    jekyll: 
+      - _config.yml
+      - _compress_false.yml
+  compare:
+    - _expected/compress_false/stylesheets _site/stylesheets
+    - _expected/compress_false/javascripts _site/javascripts
+-
+  title: Should build with separate javascript and stylesheet files
+  dir: standard
+  build: true
+  config:
+    jekyll: 
+      - _config.yml
+    theme: _order_assets.yml
+  compare:
+    - _expected/order_assets/stylesheets _site/stylesheets
+    - _expected/order_assets/javascripts _site/javascripts
+    - _expected/order_assets/asset_tag.html _site/asset_tag.html
+-
+  title: Should build with asynchronous CSS loading via loadCSS.js
+  dir: standard
+  build: true
+  config:
+    jekyll: 
+      - _config.yml
+      - _async_css.yml
+  compare:
+    - _expected/async_css/asset_tag.html _site/asset_tag.html
+-
+  title: Should build stylesheets and javascripts to css and js directories
+  dir: standard
+  build: true
+  config:
+    jekyll: 
+      - _config.yml
+      - _configure_asset_destination.yml
+  compare:
+    - _expected/configure_asset_destination/css _site/css
+    - _expected/configure_asset_destination/js _site/js
+    - _expected/configure_asset_destination/asset_tag.html _site/asset_tag.html
+-
+  title: Should allow multilingual configuration
+  dir: multilingual
+  build: true
+  compare: _expected _site
+-
+  title: Test plugin bootstrap templates 
+  dir: bootstrap
+  build: true
+  compare: _expected _site
+-
+  title: Test local plugin bootstrap
+  dir: bootstrap-local
+  build: true
+  compare: _expected/index.html _site/index.html
+-
+  title: Test plugin bootstrap with no posts
+  dir: bootstrap-no-posts
+  build: true
+  compare: _expected _site
+-
+  title: Test plugin bootstrap with no linkposts
+  dir: bootstrap-no-linkposts
+  build: true
+  compare: _expected _site
+-
+  title: Test plugin bootstrap with all the toppings
+  dir: bootstrap-multilingual-linkblog
+  build: true
+  compare: _expected _site
+-
+  title: Should copy all theme assets
+  dir: standard
+  before: octopress ink copy theme --path _copy --force
+  compare: _expected/copy_test _copy
+  after: rm -rf _copy
+-
+  title: Should copy only pages and layouts
+  dir: standard
+  before: octopress ink copy theme --layouts --pages --path _copy --force
+  compare: _expected/copy_layouts_pages _copy
+  after: rm -rf _copy
+-
+  title: Should create a plugins scaffold
+  dir: standard
+  before: 
+    - 'rm -rf _site/test-theme'
+    - 'git config user.name > .git-config-user-name'
+    - 'git config user.email > .git-config-user-email'
+    - 'git config user.name ""'
+    - 'git config user.email ""'
+    - 'octopress ink new test-theme --theme --path _site'
+    - 'rm -rf _site/test-theme/.git'
+  compare: 
+    - _expected/test-theme/lib _site/test-theme/lib
+  after:
+    - 'cat .git-config-user-name | tr -d "\n" | xargs -0 git config user.name'
+    - 'cat .git-config-user-email | tr -d "\n" | xargs -0 git config user.email'
+    - 'rm -rf .git-config-user-name .git-config-user-email'
