@@ -1,5 +1,0 @@
----
-property: background
----
-@import '{{ theme.sass.import }}';
-body { {{ page.property }}: $bg; }

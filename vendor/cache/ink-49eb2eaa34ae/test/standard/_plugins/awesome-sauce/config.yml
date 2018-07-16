@@ -1,5 +1,0 @@
-test_override: config from plugin override
-permalinks:
-  a: /test_pages/plugin_page_override.html
-  b: /test_pages/plugin_page.html
-  dir/c.html: /test_pages/c.html

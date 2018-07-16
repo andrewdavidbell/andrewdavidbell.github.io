@@ -4,4 +4,3 @@ _site
 _deploy.yml
 .bundle
 vendor/ruby
-.ink-cache

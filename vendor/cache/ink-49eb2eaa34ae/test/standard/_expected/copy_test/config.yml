@@ -1,5 +1,0 @@
-test: config from theme
-test_override: also config from theme
-
-sass:
-  import: partials/colors
