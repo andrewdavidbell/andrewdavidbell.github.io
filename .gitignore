@@ -3,4 +3,4 @@ _site
 .jekyll-metadata
 _deploy.yml
 .bundle
-vendor/ruby
+vendor
